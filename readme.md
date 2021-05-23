@@ -40,3 +40,5 @@ Then the `getText()` function is declared.
 The fetch API is used to fetch the data from the given URL and is saved as an object in `myObject`. The text from this object is saved into `myText` and is then further parsed as a JSON object and stored in `parsedJSON`.
 
 The data is then appended into the table by using a loop where each element of the JSON object is stored into the table under the right columns.
+
+For the address field, the street, suite, city and zipcode are concatenated with commas and then put into the table.
