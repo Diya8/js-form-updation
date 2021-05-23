@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
-/* Styles */
 * {
   margin: 0;
   padding: 0;
@@ -52,4 +51,8 @@ form button {
 }
 form .error {
   color: #ff0000;
+}
+
+table, th, td {
+  border: 1px solid black;
 }

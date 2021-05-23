@@ -2,18 +2,18 @@
 <html>
 
 <script src="C:/Users/diyam/node_modules/jquery/dist/jquery.min.js"></script>
-<script src="vendor/jquery/dist/jquery.min.js"></script>
-<!-- <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script> -->
 <script src="C:/Users/diyam/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="form-validation.js"></script>
+<script src="table.js"></script>
+
 <head>
   <title>Users</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
+<body onload="getText(file,'#table')">
   <div class="container">
   <h2>Users</h2>
-  <form action="#" name="users">
+  <form action="" name="users-form">
 
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname"/>
@@ -42,6 +42,36 @@
     <button type="submit">Submit</button>
 
   </form>
+</div>
+<div>
+  <!-- <table id="myTable">
+        <tr>
+          <th>Sr. No.</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Website</th>
+          <th>Company name</th>
+        </tr>
+    </table> -->
+
+    <br><br>
+      
+    <table align = "center"
+            id="table" border="1">
+            <tr>
+          <th>Sr. No.</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Website</th>
+          <th>Company name</th>
+        </tr>
+    </table>
 </div>
 </body>
 </html>

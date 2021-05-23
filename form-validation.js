@@ -1,7 +1,13 @@
+$.validator.addMethod( "phoneUS", function( phone_number, element ) {
+  phone_number = phone_number.replace( /\s+/g, "" );
+  return this.optional( element ) || phone_number.length > 9 &&
+    phone_number.match(/^\d{3}-\d{3}-\d{4}$/);
+}, "Please specify a valid phone number" );
+
 $(function() {
   // Initialize form validation on the registration form.
   // It has the name attribute "registration"
-  $("form[name='users']").validate({
+  $("form[name='users-form']").validate({
     // Specify validation rules
     rules: {
       // The key name on the left side is the name attribute
@@ -13,7 +19,7 @@ $(function() {
       },
       lastname: {
         required: true,
-        minlength: 3,
+        minlength: 3
       },
       username: "required",
       email: {
@@ -23,7 +29,10 @@ $(function() {
         email: true
       },
       address: "required",
-      phone: "required",
+      phone: {
+        required: true,
+        phoneUS: true
+      },
       website: {
         url: true
       }
@@ -41,7 +50,10 @@ $(function() {
       username: "Please provide a username",
       email: "Please enter a valid email address",
       address: "Please provide an address",
-      phone: "Please provide phone number",
+      phone: {
+        required: "Please provide phone number",
+        phoneUS: "Please provide phone number in ddd-ddd-dddd format"
+      },
       website: "Please provide valid URL"
     },
     // Make sure the form is submitted to the destination defined
