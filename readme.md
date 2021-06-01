@@ -2,7 +2,7 @@
 
 This project consists of 4 files. 
 
-1. `index.html`
+1. `users.html`
 2. `style.css`
 3. `form-validation.js`
 4. `table.js`
